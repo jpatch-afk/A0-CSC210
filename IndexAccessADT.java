@@ -1,10 +1,20 @@
 /**
- * Interface describing the fundamental operations supported directly by Java's built-in arrays
+ * Interface describing the fundamental methods supported directly by Java's built-in arrays 
  * 
  * @param <T> the type of elements stored in the array 
  */
 public interface IndexAccessADT<T> {
-    
+
+    /*
+     * In the constructor, the array of type T would be initialized through calling the method T[] newArray() and specifiying the type and the length. 
+     */
+
+    /**
+     * Creates a new array of type T, using the method newArray to create a new array. Leaves the length blank and name blank for adaptability 
+     * @return a new array of type T
+     */
+    T[] newArray();
+
     /**
      * Gets the element at the specified index
      * 
@@ -20,6 +30,7 @@ public interface IndexAccessADT<T> {
      * @param index the index where to store the element (0-based)
      * @param element the element to store
      * @throws ArrayIndexOutOfBoundsException if index is out of bounds of the array size
+     * @throws IllegalArgumentException if element is of the wrong type for the array
      */
     void fill(int index, T element);
     
@@ -31,13 +42,6 @@ public interface IndexAccessADT<T> {
     int length();
     
     /**
-     * Creates a shallow copy of the array
-     * 
-     * @return a new array containing the same elements
-     */
-    T[] clone();
-    
-    /**
      * Checks if this array reference is equal to another object
      * 
      * @param other the object to compare with
@@ -46,7 +50,7 @@ public interface IndexAccessADT<T> {
     boolean equals(Object other);
 
     /**
-     * Comapres this array reference to another object lexicographically 
+     * Compares this array reference to another object lexicographically 
      * 
      * @param other the object to compare with 
      * @return 0 if the object are equal
@@ -61,35 +65,22 @@ public interface IndexAccessADT<T> {
      * 
      * @param array the object to be sorted 
      */
-    void sort(Object array); 
+    void sort(Object array);     
 
-
-    /**
-     * 
-     */
-    
 }
-
-// add int[], char[], String[], etc. 
 
 //Unit Tests 
 
 /*
- * int[5] newInt = {2, 4, 6, 8, 10};
+ * Create an array with a length of 5 that contains integers. 
  * 
+ * Write a print statement that calls the length method. This should print out an integer; in this case, the integer 5.
  * 
- * Returns an expected integer value 
- * System.out.println(newInt.length);
+ * Then, write a new print statement calling the get() method, using the parameter of 4, for example: get(4). This returns an expected integer as the index is in bounds.   
  * 
- * Returns an expected integer as index is in bounds; returns the integer 10
- * System.out.println(newInt.get(4))
+ * Then, write a print statement that calls the fill() method. Using the parameter 2 for the index and 5 for the new element, for example: fill(2,5). Running this method doesn't return anything as the index is within bounds and the element is the same type of the array. 
  * 
- * Doesn't return anything, but works expectically as the index is in bounds
- * System.out.println(newInt.fill(2, 5))
+ * Then, write a print statement that also uses the fill() parameter, but uses the parameter 6 for the index and 14 for the element, for example. This throws the ArrayIndex exception as the index is out of bounds. 
  * 
- * Throws an exception as the index parameter provided in the initialization of the newInt array 
- * System.out.println(newInt.fill(6, 14))
- * 
- * Throws an exception as the element in the parameter is of the incorrect data type 
- * System.out.println(newInt.fill(2, "cats"))
+ * Finally, write another print statement using the fill() method. Use the parameter 2 for the index and "cats" as the element. This throws the IllegalArgument Exception as the element is a String and the array requires a int type.
  */
