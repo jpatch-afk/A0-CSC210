@@ -11,27 +11,27 @@ your work, please indicate the status of each item
 
 Assignment Points:
 
-_____ 1 pt: Submission includes readme.txt
+_YES____ 1 pt: Submission includes readme.txt
 
 _YES____ 1 pt: IndexAccess class includes Javadoc describing its purpose
 
-_____ 1 pt: Javadoc specifies assumptions about how IndexAccess object is created
+__YES___ 1 pt: Javadoc specifies assumptions about how IndexAccess object is created
 
-_____ 1 pt: Correct call signatures for all the necessary IndexAccess methods
+_YES____ 1 pt: Correct call signatures for all the necessary IndexAccess methods
 
 _YES____ 1 pt: Javadoc included for all IndexAccess methods describes what they do and any restrictions on their use
 
 _YES____ 1 pt: Methods that might throw an exception are identified in Javadoc
 
-_____ 1 pt: Tests cover all IndexAccess methods
+__YES___ 1 pt: Tests cover all IndexAccess methods
 
-_____ 1 pt: Tests check all exceptional cases
+_YES____ 1 pt: Tests check all exceptional cases
 
-_____ 1 pt: SequenceADT includes methods with call signatures of various types
+_YES___ 1 pt: SequenceADT includes methods with call signatures of various types
 
-_____ 1 pt: SequenceADT class and methods all have Javadoc describing their purpose
+__YES___ 1 pt: SequenceADT class and methods all have Javadoc describing their purpose
 
 
 Kudos:
 
-_____ Implement code to test your IndexAccess interface
+_NO____ Implement code to test your IndexAccess interface
