@@ -53,9 +53,7 @@ public interface IndexAccessADT<T> {
      * Compares this array reference to another object lexicographically 
      * 
      * @param other the object to compare with 
-     * @return 0 if the object are equal
-     * @return a negative integer if this array is less than another object lexicographically 
-     * @return a positive integer if another object is greater than this array lexicographically.
+     * @return 0 if the object are equal, or a negative integer if this array is less than another object lexicographically , or a positive integer if another object is greater than this array lexicographically.
      */
     int compare(Object other);
 
